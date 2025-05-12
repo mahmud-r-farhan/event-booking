@@ -1,0 +1,41 @@
+<div class="form-wrapper">
+  <h1 class="form-title">Register for the Event</h1>
+  <form (ngSubmit)="onSubmit()" #form="ngForm" novalidate>
+    <section class="form-grid">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput name="name" required [(ngModel)]="formData.name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" required [(ngModel)]="formData.email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput name="phone" [(ngModel)]="formData.phone" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" name="age" [(ngModel)]="formData.age" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput name="address" [(ngModel)]="formData.address"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Message</mat-label>
+        <textarea matInput name="message" [(ngModel)]="formData.message"></textarea>
+      </mat-form-field>
+    </section>
+
+    <div class="form-actions">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
